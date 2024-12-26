@@ -9,7 +9,7 @@
     <link href="assets/fontawesome-free-6.7.2-web/css/solid.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/highlight.js-11.10.0/styles/default.min.css">
     <link rel="stylesheet" href="assets/style.css">
-
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body class="bg-light d-flex justify-content-center">
     <div id="app" class="container mt-5 bg-white rounded shadow">
@@ -153,7 +153,7 @@
                 <div class="position-absolute top-10 end-0 me-3" style="margin-top: 20px !important;">
                     <strong><i class="fas fa-edit"></i></strong> {{ viewSnippet.updated_at }}
                 </div>
-                <h1 class="text-center mb-4">{{ viewSnippet.title }}</h1>
+                <h1 class="text-center mb-4"><img src="assets/favicon.png" class="logo"> {{ viewSnippet.title }}</h1>
             </div>
             <hr/>
             <div>
@@ -173,7 +173,7 @@
         </div>
 
         <div id="main">
-            <h1 class="text-center mb-4">Personal Snippets</h1>
+                <h1 class="text-center mb-4"><img src="assets/favicon.png" class="logo"> Personal Snippets</h1>
             <div class="row mb-3 justify-content-center">
                 <div class="col-md-8 d-flex">
                     <input type="text" v-model="searchQuery" class="form-control me-3" placeholder="Search snippets...">

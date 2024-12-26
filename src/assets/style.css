@@ -77,3 +77,9 @@
 .form-control::placeholder {
     color: #d3d3d3;
 }
+
+.logo {
+    width: 42px;
+    height: 42px;
+    border: 0px;
+}
