@@ -1,4 +1,4 @@
-# Personal Snippets
+# ![](https://github.com/Maiux92/personal-snippets/raw/refs/heads/main/assets/favicon.png) Personal Snippets
 Simple dashboard to manage your code snippets and personal notes with syntax highlighting and a bring-your-own-authentication-provider philosophy.
 
 ![](https://github.com/Maiux92/personal-snippets/raw/refs/heads/main/misc/screen.gif)
@@ -21,6 +21,7 @@ Personal Snippets uses the following libraries:
 - [Vue.js v2.7.16](https://vuejs.org/)
 - Icons: [fontawesome v6.7.2](https://fontawesome.com/)
 - Syntax Highlighting: [highlight.js v11.10.0](https://highlightjs.org/) with [highlightjs-line-numbers v2.9.0](https://github.com/wcoder/highlightjs-line-numbers.js) plugin
+- Favicon from [Flaticon](https://www.flaticon.con): [Code icons created by Roundicons Premium - Flaticon](https://www.flaticon.com/free-icons/code)
 
 To ensure Personal Snippets works even in the absence of an active internet connection, it loads these libraries from the `assets/` directory and not from a CDN.
 
