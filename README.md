@@ -9,6 +9,7 @@ Simple dashboard to manage your code snippets and personal notes with syntax hig
 - Search text across all snippets (title and content)
 - Single-user environment without authentication
 - Simple SQLite database
+- [Homepage](https://github.com/gethomepage/homepage) widget/stats
 
 ## Rationale
 I needed a simple web interface to manage my notes and code snippets without requiring multiple users management, authentication, or collaboration capabilities, and I wanted it to work even if my internet connection goes down (that's why all the used libraries are in the `assets/` directory). I tried multiple nopaste web apps, note editing web apps, and code collaboration web apps, but they didn't fit my needs.
@@ -38,3 +39,23 @@ In my production~ish environment, I serve Personal Snippets through an apache2 w
 Simply run ``docker compose up -d``.
 The compose file will create a local `db/` directory that will contain the SQLite database with your snippets.
 You still need to add an authentication provider if you want to forbid access to your Personal Snippets instance.
+
+## Homepage widget
+Follow [homepage guide](https://gethomepage.dev/configs/services/#icons) to enable custom icons:
+1) Create a docker mount to `/app/public/icons` (e.g. `- ./icons:/app/public/icons`)
+2) Copy `src/assets/favicon.png` from personal snippets git repo to homepage's `icons/` docker mount (name it `personal-snippets.png`)
+3) Include the following in your configuration
+
+```
+- PersonalSnippets:
+      href: {YOUR_PERSONAL_SNIPPETS_INSTANCE_URL}
+      icon: /icons/personal-snippets.png
+      widget:
+        type: customapi
+        url: {YOUR_PERSONAL_SNIPPETS_INSTANCE_URL}/api.php?stats
+        mappings:
+          - field: snippets
+            label: Snippets Count
+          - field: languages
+            label: Different Languages
+```
