@@ -53,7 +53,7 @@ function handleDownloadRequest($db){
     if($dw) {
         $stmt = $db->prepare("SELECT * FROM snippets WHERE id = ? LIMIT 1");
         $stmt->execute([$dw]);
-        $snippet = $stmt->fetch();
+        $snippet = $stmt->fetch(PDO::FETCH_ASSOC);
 
         include('extensions.inc.php');
 
@@ -71,8 +71,14 @@ function handleDownloadRequest($db){
 
 
 function handleGetRequest($db) {
-    $stmt = $db->query("SELECT * FROM snippets ORDER BY updated_at DESC");
-    $snippets = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    if(isset($_GET['stats'])) {
+        $stmt = $db->query("SELECT count(*) as snippets, count(DISTINCT language) as languages FROM snippets");
+        $snippets = $stmt->fetch(PDO::FETCH_ASSOC);
+    } else {
+        $stmt = $db->query("SELECT * FROM snippets ORDER BY updated_at DESC");
+        $snippets = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     echo json_encode($snippets);
 }
 
