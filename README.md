@@ -11,8 +11,8 @@ Simple dashboard to manage your code snippets and personal notes with syntax hig
 - Simple SQLite database
 
 ## Rationale
-I needed a simple web interface to manage my notes and code snippets without requiring multiple users management, authentication, or collaboration capabilities, and I wanted to work even if my internet connection goes down (that's why all the libraries I use are in the assets/ directory). I tried multiple nopaste web apps, note editing web apps, and code collaboration web apps, but they didn't fit my needs.
-I run a home server with [Traefik](https://traefik.io/traefik/) as a reverse proxy and [Authelia](https://www.authelia.com/) as a forward auth provider, and I don't need user management, authentication, or collaboration features. Therefore, I created ~~another one~~ my own web app.
+I needed a simple web interface to manage my notes and code snippets without requiring multiple users management, authentication, or collaboration capabilities, and I wanted it to work even if my internet connection goes down (that's why all the used libraries are in the assets/ directory). I tried multiple nopaste web apps, note editing web apps, and code collaboration web apps, but they didn't fit my needs.
+I run a home server with [Traefik](https://traefik.io/traefik/) as a reverse proxy and [Authelia](https://www.authelia.com/) as a forward auth provider, and I don't need user management, authentication, or collaboration features. Therefore, I created ~~another snippet management web app~~ my own web app.
 
 ## Dependencies
 Personal Snippets uses the following libraries:
