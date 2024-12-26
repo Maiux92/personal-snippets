@@ -1,4 +1,4 @@
-# ![](https://github.com/Maiux92/personal-snippets/raw/refs/heads/main/assets/favicon.png) Personal Snippets
+# <img src="https://github.com/Maiux92/personal-snippets/raw/refs/heads/main/src/assets/favicon.png" border="0" width="32px"> Personal Snippets
 Simple dashboard to manage your code snippets and personal notes with syntax highlighting and a bring-your-own-authentication-provider philosophy.
 
 ![](https://github.com/Maiux92/personal-snippets/raw/refs/heads/main/misc/screen.gif)
