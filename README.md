@@ -42,8 +42,8 @@ You still need to add an authentication provider if you want to forbid access to
 
 ## Homepage widget
 ![](https://github.com/Maiux92/personal-snippets/raw/refs/heads/main/misc/homepage-screen.png)
-Follow [homepage guide](https://gethomepage.dev/configs/services/#icons) to enable custom icons:
-1) Create a docker mount to `/app/public/icons` (e.g. `- ./icons:/app/public/icons`)
+
+1) Follow [homepage guide](https://gethomepage.dev/configs/services/#icons) to enable custom icons, which simply requires you to create a docker mount to `/app/public/icons` (e.g. `- ./icons:/app/public/icons`)
 2) Copy `src/assets/favicon.png` from personal snippets git repo to homepage's `icons/` docker mount (name it `personal-snippets.png`)
 3) Include the following in your configuration
 
