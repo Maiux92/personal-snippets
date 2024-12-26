@@ -41,6 +41,7 @@ The compose file will create a local `db/` directory that will contain the SQLit
 You still need to add an authentication provider if you want to forbid access to your Personal Snippets instance.
 
 ## Homepage widget
+![](https://github.com/Maiux92/personal-snippets/raw/refs/heads/main/misc/homepage-screen.png)
 Follow [homepage guide](https://gethomepage.dev/configs/services/#icons) to enable custom icons:
 1) Create a docker mount to `/app/public/icons` (e.g. `- ./icons:/app/public/icons`)
 2) Copy `src/assets/favicon.png` from personal snippets git repo to homepage's `icons/` docker mount (name it `personal-snippets.png`)
