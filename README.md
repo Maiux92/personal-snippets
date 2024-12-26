@@ -22,18 +22,18 @@ Personal Snippets uses the following libraries:
 - Icons: [fontawesome v6.7.2](https://fontawesome.com/)
 - Syntax Highlighting: [highlight.js v11.10.0](https://highlightjs.org/) with [highlightjs-line-numbers v2.9.0](https://github.com/wcoder/highlightjs-line-numbers.js) plugin
 
-To ensure personal snippets work even in the absence of an active internet connection, it loads these libraries from the assets/ directory and not from a CDN.
+To ensure Personal Snippets work even in the absence of an active internet connection, it loads these libraries from the assets/ directory and not from a CDN.
 
 ## Disclaimer
 I wrote the code in one night~ish. I am not a front-end expert, and the code is probably inefficient/buggy and can be improved. I just needed something simple to manage my notes about my infrastructure and snippets of bash commands that I use once a year, and I didn't like the alternatives. 
 
 ---
 # Usage
-## Use your own HTTP server
+## Use your own HTTP server and authentication provider
 You can simply copy the content of the src directory wherever you want, as long as the webserver supports SQLite and PHP.
-I serve personal through an apache2 container, which I expose to my lan using [traefik](https://traefik.io/traefik/) reverse proxy, and I use [authelia](https://www.authelia.com/) to manage authentication.
+In my production~ish environment, I serve Personal Snippets through an apache2 webserver, which I expose to my LAN using [traefik](https://traefik.io/traefik/) reverse proxy, and I use [authelia](https://www.authelia.com/) for authentication.
 
-## Docker
+## Try it with docker
 Simply run ``docker compose up -d``.
 The compose file will create a local `db/` directory that will contain the SQLite database with your snippets.
 You still need to add an authentication provider if you want to forbid access to your personal snippets instance.
