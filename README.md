@@ -1,9 +1,12 @@
 # Personal Snippets
-Simple dashboard to manage your code snippets and personal notes with syntax highlighting with a bring-your-own-authentication-provider philosophy.
+Simple dashboard to manage your code snippets and personal notes with syntax highlighting and a bring-your-own-authentication-provider philosophy.
+
+![](https://github.com/Maiux92/personal-snippets/raw/refs/heads/main/misc/screen.gif)
 
 ## Features:
 - Simple web interface to create, view, edit, and download your notes and code snippets
 - Syntax highlighting via highligh.js
+- Search text across all snippets (title and content)
 - Single-user environment without authentication
 - Simple SQLite database
 
