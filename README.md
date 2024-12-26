@@ -25,7 +25,7 @@ Personal Snippets uses the following libraries:
 To ensure personal snippets work even in the absence of an active internet connection, it loads these libraries from the assets/ directory and not from a CDN.
 
 ## Disclaimer
-I wrote the code in one night. I am not a front-end expert (that's why I didn't use node.js), which is probably inefficient/buggy and can be improved. I just needed something simple that works to manage my notes about my infrastructure and snippets of bash commands that I use once a year, and I didn't like the alternatives. 
+I wrote the code in one night~ish. I am not a front-end expert and the code is probably inefficient/buggy, and can be probably improved. I just needed something simple to manage my notes about my infrastructure and snippets of bash commands that I use once a year, and I didn't like the alternatives. 
 
 ---
 # Usage
